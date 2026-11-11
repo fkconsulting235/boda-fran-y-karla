@@ -141,7 +141,7 @@ button, a { font: inherit; }
 
 .lugar-n { font-family: var(--display); font-size: 32px; line-height: 1.15; color: var(--gold); }
 .addr { color: var(--soft); max-width: 340px; }
-.vestir { font-family: var(--display); font-size: 40px; line-height: 1.1; color: var(--gold); }
+.vestir { font-family: var(--display); font-size: clamp(30px, 9vw, 40px); line-height: 1.1; color: var(--gold); text-wrap: balance; }
 .pase { display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--gold); border-radius: 999px; padding: 7px 18px; margin-top: 4px; font-size: 12px; letter-spacing: .2em; text-transform: uppercase; font-weight: 500; color: var(--gold); }
 .mapa { display: block; width: 100%; max-width: 340px; border: 1px solid var(--line); border-radius: 4px; overflow: hidden; text-decoration: none; background: var(--card); box-shadow: 0 8px 22px rgba(79, 58, 24, .14); transition: transform .2s ease; }
 .mapa:hover { transform: translateY(-2px); }
@@ -344,9 +344,10 @@ button, a { font: inherit; }
   </section>
 
   <section class="sec">
-    <h2>Código de vestimenta</h2>
-    <p class="vestir">Cóctel</p>
-    <p class="addr">Te pedimos evitar el color blanco.</p>
+    <p class="eyebrow">Dress code</p>
+    <p class="vestir">Elegancia formal</p>
+    <p class="addr" style="max-width: 380px;">Nos encantará compartir este día especial con ustedes. Les invitamos a vestir con un estilo elegante, ideal para celebrar nuestra boda civil.</p>
+    <p class="addr" style="max-width: 380px; color: var(--ink); font-weight: 500;">Por favor, evitar el color blanco en su totalidad.</p>
   </section>
 
   <section class="sec">
