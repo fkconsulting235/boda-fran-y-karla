@@ -13,7 +13,7 @@
 <title>Boda Francisco y Karla</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,500;1,400&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Pinyon+Script&display=swap" rel="stylesheet">
 <style>
 /* Concepto: invitación digital en dos tiempos. Portada con estampado floral dorado y tarjeta central con "Abrir"; después una sola columna vertical, centrada y enmarcada por dos filetes dorados, con secciones cortas y mucho aire. */
 :root {
@@ -24,8 +24,9 @@
   --soft: #6E5A30;
   --tan: #B9A06B;
   --line: #E4D9BE;
-  --display: "Bodoni Moda", "Didot", "Bodoni 72", Georgia, serif;
-  --body: "Lora", Georgia, "Times New Roman", serif;
+  --display: "Cormorant Garamond", "Cormorant", Garamond, Georgia, serif;
+  --script: "Pinyon Script", "Snell Roundhand", cursive;
+  --body: "Cormorant Garamond", "Cormorant", Garamond, Georgia, serif;
   color-scheme: light;
 }
 * { box-sizing: border-box; }
@@ -34,8 +35,10 @@ body {
   background: var(--paper);
   color: var(--ink);
   font-family: var(--body);
-  font-size: 17px;
-  line-height: 1.6;
+  font-size: 20px;
+  line-height: 1.5;
+  font-weight: 500;
+  font-variant-numeric: lining-nums;
   padding-left: max(16px, env(safe-area-inset-left, 0px));
   padding-right: max(16px, env(safe-area-inset-right, 0px));
 }
@@ -81,10 +84,10 @@ button, a { font: inherit; }
   box-shadow: 0 6px 14px rgba(79, 58, 24, .3);
   margin-top: -54px;
 }
-.intro-names { font-family: var(--display); font-weight: 400; font-size: 36px; line-height: 1.12; color: var(--gold); margin-top: 6px; }
-.intro-names i { display: block; font-size: 22px; line-height: 1; }
-.intro-date { color: var(--soft); font-size: 17px; }
-.intro-msg { color: var(--soft); font-size: 17px; }
+.intro-names { font-family: var(--script); font-weight: 400; font-size: 54px; line-height: 1.05; color: var(--gold); margin-top: 6px; }
+.intro-names i { display: block; font-style: normal; font-size: 30px; line-height: 1.1; }
+.intro-date { color: var(--soft); font-size: 21px; }
+.intro-msg { color: var(--soft); font-size: 21px; }
 .btn {
   display: inline-flex; align-items: center; justify-content: center; gap: 8px;
   min-height: 46px; padding: 0 30px;
@@ -113,40 +116,41 @@ button, a { font: inherit; }
   padding: 40px 24px 36px; text-align: center;
   display: flex; flex-direction: column; align-items: center; gap: 14px;
 }
-.eyebrow { font-size: 12px; letter-spacing: .32em; text-transform: uppercase; color: var(--soft); font-weight: 500; }
-.hero-names { font-family: var(--display); font-weight: 400; color: var(--gold); font-size: clamp(30px, 9vw, 44px); line-height: 1.12; text-wrap: balance; }
-.hero-names i { display: block; font-size: .55em; line-height: 1.3; }
+.eyebrow { font-size: 14px; letter-spacing: .32em; text-transform: uppercase; color: var(--soft); font-weight: 500; }
+.hero-names { font-family: var(--script); font-weight: 400; color: var(--gold); font-size: clamp(36px, 10vw, 50px); line-height: 1.15; text-wrap: balance; }
+.hero-names i { display: block; font-style: normal; font-size: .6em; line-height: 1.3; }
 .hero-date { color: var(--soft); }
 
 .sec { padding: 52px 24px 0; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 16px; }
-.sec h2 { font-family: var(--display); font-weight: 400; font-size: 30px; line-height: 1.15; color: var(--gold); text-wrap: balance; }
-.lead { font-size: 20px; line-height: 1.55; max-width: 380px; text-wrap: balance; }
+.sec h2 { font-family: var(--display); font-weight: 500; font-size: 38px; line-height: 1.15; color: var(--gold); text-wrap: balance; }
+.lead { font-size: 25px; line-height: 1.55; max-width: 380px; text-wrap: balance; }
 .orn { display: block; }
 
 .fecha { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 18px; width: 100%; max-width: 340px; }
 .fecha .d { font-family: var(--display); font-size: 76px; line-height: 1; color: var(--gold); }
-.fecha .t { font-size: 13px; letter-spacing: .26em; text-transform: uppercase; font-weight: 500; line-height: 1.8; padding-block: 8px; border-block: 1px solid var(--tan); }
-.hora { font-size: 13px; letter-spacing: .3em; text-transform: uppercase; font-weight: 500; color: var(--soft); }
+.fecha .t { font-size: 15px; letter-spacing: .26em; text-transform: uppercase; font-weight: 500; line-height: 1.8; padding-block: 8px; border-block: 1px solid var(--tan); }
+.hora { font-size: 15px; letter-spacing: .3em; text-transform: uppercase; font-weight: 500; color: var(--soft); }
 
 .count { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; width: 100%; max-width: 340px; }
 .count div { border: 1px solid var(--line); border-radius: 4px; padding: 12px 4px 10px; background: var(--card); }
-.count b { display: block; font-family: var(--display); font-weight: 400; font-size: 30px; line-height: 1.1; color: var(--gold); font-variant-numeric: tabular-nums; }
-.count span { font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: var(--soft); }
+.count b { display: block; font-family: var(--display); font-weight: 400; font-size: 36px; line-height: 1.1; color: var(--gold); font-variant-numeric: tabular-nums; }
+.count span { font-size: 13px; letter-spacing: .2em; text-transform: uppercase; color: var(--soft); }
 
 .cal { width: 100%; max-width: 320px; }
 .cal-head, .cal-grid { display: grid; grid-template-columns: repeat(7, 1fr); }
-.cal-head span { font-size: 12px; letter-spacing: .12em; color: var(--soft); padding-bottom: 8px; }
-.cal-grid span { height: 38px; display: grid; place-items: center; font-size: 15px; font-variant-numeric: tabular-nums; }
+.cal-head span { font-size: 14px; letter-spacing: .12em; color: var(--soft); padding-bottom: 8px; }
+.cal-grid span { height: 38px; display: grid; place-items: center; font-size: 19px; font-variant-numeric: tabular-nums; }
 .cal-grid .on { background: var(--gold); color: #FFFFFF; border-radius: 50%; font-weight: 500; }
 
-.lugar-n { font-family: var(--display); font-size: 32px; line-height: 1.15; color: var(--gold); }
+.lugar-n { font-family: var(--display); font-weight: 500; font-size: 40px; line-height: 1.15; color: var(--gold); }
 .addr { color: var(--soft); max-width: 340px; }
-.vestir { font-family: var(--display); font-size: clamp(30px, 9vw, 40px); line-height: 1.1; color: var(--gold); text-wrap: balance; }
-.pase { display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--gold); border-radius: 999px; padding: 7px 18px; margin-top: 4px; font-size: 12px; letter-spacing: .2em; text-transform: uppercase; font-weight: 500; color: var(--gold); }
+.vestir { font-family: var(--display); font-size: clamp(34px, 9.5vw, 46px); line-height: 1.1; color: var(--gold); text-wrap: balance; }
+.pase { display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--gold); border-radius: 999px; padding: 7px 18px; margin-top: 4px; font-size: 14px; letter-spacing: .2em; text-transform: uppercase; font-weight: 500; color: var(--gold); }
 .mapa { display: block; width: 100%; max-width: 340px; border: 1px solid var(--line); border-radius: 4px; overflow: hidden; text-decoration: none; background: var(--card); box-shadow: 0 8px 22px rgba(79, 58, 24, .14); transition: transform .2s ease; }
 .mapa:hover { transform: translateY(-2px); }
+.count b, .cal-grid span, .acct-item .num, .fecha .d, .hero-names, .intro-names { font-variant-numeric: lining-nums tabular-nums; }
 .mapa svg { display: block; width: 100%; height: auto; }
-.mapa .pie { display: block; padding: 12px; text-align: center; font-size: 14px; letter-spacing: .06em; font-weight: 500; color: var(--gold); border-top: 1px solid var(--line); }
+.mapa .pie { display: block; padding: 12px; text-align: center; font-size: 17px; letter-spacing: .06em; font-weight: 500; color: var(--gold); border-top: 1px solid var(--line); }
 
 .gift-btn {
   width: 100%; max-width: 320px; background: var(--card); color: var(--gold);
@@ -155,19 +159,19 @@ button, a { font: inherit; }
   transition: background .2s ease;
 }
 .gift-btn:hover { background: #FBF6EA; }
-.gift-btn strong { font-family: var(--display); font-weight: 400; font-size: 22px; }
-.gift-btn small { font-size: 12px; letter-spacing: .26em; text-transform: uppercase; color: var(--soft); }
+.gift-btn strong { font-family: var(--display); font-weight: 500; font-size: 28px; }
+.gift-btn small { font-size: 14px; letter-spacing: .26em; text-transform: uppercase; color: var(--soft); }
 .acct { width: 100%; max-width: 340px; display: flex; flex-direction: column; gap: 12px; }
 .acct-item { background: var(--card); border: 1px solid var(--line); border-radius: 4px; padding: 14px 16px; display: flex; flex-direction: column; align-items: center; gap: 4px; }
-.acct-item .bk { font-size: 12px; letter-spacing: .24em; text-transform: uppercase; color: var(--soft); font-weight: 500; }
-.acct-item .num { font-size: 21px; letter-spacing: .06em; font-variant-numeric: tabular-nums; word-break: break-all; }
-.copy { margin-top: 6px; min-height: 40px; padding: 0 22px; background: transparent; color: var(--gold); border: 1.5px solid var(--gold); border-radius: 999px; cursor: pointer; font-size: 14px; letter-spacing: .06em; }
+.acct-item .bk { font-size: 14px; letter-spacing: .24em; text-transform: uppercase; color: var(--soft); font-weight: 500; }
+.acct-item .num { font-size: 25px; letter-spacing: .06em; font-variant-numeric: tabular-nums; word-break: break-all; }
+.copy { margin-top: 6px; min-height: 40px; padding: 0 22px; background: transparent; color: var(--gold); border: 1.5px solid var(--gold); border-radius: 999px; cursor: pointer; font-size: 17px; font-weight: 600; letter-spacing: .06em; }
 .copy:hover { background: rgba(138, 106, 47, .08); }
 .titular { font-style: italic; color: var(--soft); }
 
 .foot { margin-top: 56px; min-height: 300px; align-items: center; }
 .foot .hero-card { padding-block: 32px; gap: 8px; }
-.foot .hero-names { font-size: clamp(26px, 8vw, 36px); }
+.foot .hero-names { font-size: clamp(34px, 9vw, 44px); }
 
 .musica {
   position: fixed; z-index: 200;
@@ -270,7 +274,7 @@ button, a { font: inherit; }
     <svg class="toile" aria-hidden="true"><rect width="100%" height="100%" fill="url(#toileA)"></rect><rect width="100%" height="100%" fill="url(#toileB)" opacity=".75"></rect></svg>
     <div class="hero-card">
       <p class="eyebrow">Nuestra boda civil</p>
-      <h2 class="hero-names" style="font-family: var(--display); font-weight: 400; color: var(--gold);">Francisco Peralta<i>&amp;</i>Karla Molina</h2>
+      <h2 class="hero-names" style="font-family: var(--script); font-weight: 400; color: var(--gold);">Francisco Peralta<i>&amp;</i>Karla Molina</h2>
       <p class="pase"><svg width="14" height="16" viewBox="0 0 14 16" fill="none" stroke="#8A6A2F" stroke-width="1.4" aria-hidden="true"><circle cx="7" cy="4.5" r="3"></circle><path d="M1.5 15 C1.5 10.5 4 9 7 9 C10 9 12.5 10.5 12.5 15"></path></svg><svg width="14" height="16" viewBox="0 0 14 16" fill="none" stroke="#8A6A2F" stroke-width="1.4" aria-hidden="true"><circle cx="7" cy="4.5" r="3"></circle><path d="M1.5 15 C1.5 10.5 4 9 7 9 C10 9 12.5 10.5 12.5 15"></path></svg><svg width="14" height="16" viewBox="0 0 14 16" fill="none" stroke="#8A6A2F" stroke-width="1.4" aria-hidden="true"><circle cx="7" cy="4.5" r="3"></circle><path d="M1.5 15 C1.5 10.5 4 9 7 9 C10 9 12.5 10.5 12.5 15"></path></svg><span>Válido para 3 personas</span></p>    </div>
   </section>
 
@@ -329,12 +333,12 @@ button, a { font: inherit; }
         <path d="M-10 150 C80 130 160 100 350 72" fill="none" stroke="#FFFFFF" stroke-width="12"></path>
         <path d="M118 -10 C138 60 150 130 172 200" fill="none" stroke="#D2C294" stroke-width="11"></path>
         <path d="M118 -10 C138 60 150 130 172 200" fill="none" stroke="#FFFFFF" stroke-width="7"></path>
-        <text x="22" y="146" transform="rotate(-11 22 146)" font-family="Lora, Georgia, serif" font-size="9" fill="#6E5A30">Carretera Nueva a León</text>
+        <text x="22" y="146" transform="rotate(-11 22 146)" font-family="Cormorant Garamond, Georgia, serif" font-size="10" font-weight="600" fill="#6E5A30">Carretera Nueva a León</text>
         <ellipse cx="170" cy="112" rx="9" ry="3" fill="#4F3A18" opacity=".25"></ellipse>
         <path d="M170 110 C158 94 154 88 154 80 A16 16 0 0 1 186 80 C186 88 182 94 170 110 Z" fill="#8A6A2F"></path>
         <circle cx="170" cy="80" r="6" fill="#FFFFFF"></circle>
         <rect x="194" y="64" width="112" height="26" rx="4" fill="#FFFFFF" stroke="#E4D9BE"></rect>
-        <text x="250" y="81" text-anchor="middle" font-family="Lora, Georgia, serif" font-size="12" font-weight="500" fill="#4F3A18">Brasas del Sur</text>
+        <text x="250" y="81" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-size="14" font-weight="600" fill="#4F3A18">Brasas del Sur</text>
       </svg>
       <span class="pie">Ver en Google Maps</span>
     </a>
